@@ -6,7 +6,7 @@ This project demonstrates a real-time ELT data pipeline using Microsoft Azure se
 
 ## 🏗️ Project Workflow
 
-![Project Workflow](Data/Uber_real_time_project_workflow.png)
+![Project Workflow](./Data/Uber_real_time_project_workflow.png)
 
 ## 🛠️ Technologies Used
 
