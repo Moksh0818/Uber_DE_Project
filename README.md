@@ -1,37 +1,45 @@
 # Azure Real-Time Data Engineering Pipeline – Uber
 
-## Project Overview
+## 📌 Project Overview
 
-This project demonstrates a real-time streaming data pipeline using Microsoft Azure services. Streaming events were sent to Azure Event Hub through a sample web application and processed using Azure Databricks Structured Streaming.
+This project demonstrates a real-time ELT data pipeline using Microsoft Azure services. Streaming events were generated through a sample web application, ingested into Azure Event Hub, transferred to Azure Data Lake Storage using Azure Data Factory, and processed using Azure Databricks Structured Streaming with PySpark.
 
-## Technologies Used
+## 🏗️ Project Workflow
+
+![Project Workflow](Uber_real_time_project_workflow.png)
+
+## 🛠️ Technologies Used
 
 - Azure Event Hub
+- Azure Data Factory
+- Azure Data Lake Storage Gen2
 - Azure Databricks
 - PySpark
 - Structured Streaming
-- Azure Data Factory
-- Azure Data Lake Storage
 - Delta Live Tables
 - Git
+- SQL
 
-## Key Features
+## ✨ Key Features
 
-- Built a real-time streaming data pipeline using Azure Event Hub.
-- Processed streaming events using Structured Streaming and PySpark.
-- Implemented Delta Live Tables for automated data processing.
-- Applied Bronze, Silver, and Gold architecture for scalable data processing.
+- Built a real-time ELT data pipeline using Microsoft Azure services.
+- Used Azure Event Hub for streaming event ingestion.
+- Used Azure Data Factory to transfer raw streaming data into Azure Data Lake Storage (Bronze layer).
+- Processed streaming data using Azure Databricks Structured Streaming and PySpark.
+- Implemented Bronze, Silver, and Gold layers following the Medallion Architecture.
+- Generated analytics-ready datasets for downstream analysis.
 
-## Project Workflow
+## 🔄 Project Workflow
 
-1. Generated sample events using a web application.
+1. Generated sample events using a dummy web application.
 2. Sent streaming events to Azure Event Hub.
-3. Processed incoming data using Azure Databricks Structured Streaming.
-4. Applied transformations using PySpark.
-5. Produced analytics-ready datasets.
+3. Used Azure Data Factory to ingest raw events into Azure Data Lake Storage.
+4. Processed raw data using Azure Databricks Structured Streaming.
+5. Applied PySpark transformations to create Silver and Gold layers.
+6. Generated curated datasets for analytics.
 
-## Repository Contents
+## 📂 Repository Contents
 
-This repository contains the sample event producer application and supporting project resources.
+This repository contains the sample event producer application and supporting project resources used for the real-time data engineering pipeline.
 
-> Note: The sample web application was used only to generate events for Azure Event Hub. My primary work focused on understanding and implementing the Azure Data Engineering pipeline and streaming data processing workflow.
+> **Note:** The sample web application was used only to generate events for Azure Event Hub. My primary contribution focused on building and understanding the Azure Data Engineering pipeline, including Azure Event Hub, Azure Data Factory, Azure Data Lake Storage, Azure Databricks Structured Streaming, and PySpark-based data processing.
